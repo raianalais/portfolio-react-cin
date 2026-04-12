@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     const dados = {
         nomeCompleto: "Raiana Laís Pereira Donato",
-        apresentacao: "Estudante de Graduação com foco em Desenvolvimento de Software e Designs de Interfaces.",
+        apresentacao: "Técnica em Desenvolvimento de Sistemas e estudante de graduação em Sistemas de Informação, com foco em desenvolvimento de software e design de interfaces.",
         instituicao: "CIN-UFPE",
         curso: "Sistemas de informação",
         interesses: [
