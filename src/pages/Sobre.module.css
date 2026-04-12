@@ -1,6 +1,176 @@
-.card p {
-  text-align: justify;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+/*_____________________________________________________________
+
+CONFIGURAÇÕES DE LAYOUT E FUNDO (CONTAINER)
+
+*/______________________________________________________________
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 50% 50%, #2e1a47 0%, #0d051a 100%);
+  color: #ffffff;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  box-sizing: border-box;
+}
+
+/* Efeito de iluminação no fundo (Blur) */
+.container::before {
+  content: "";
+  position: fixed;
+  top: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: #8b5cf6;
+  filter: blur(150px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+
+/*___________________________________________________________
+
+CABEÇALHO (VOLTA E TITULO)
+
+____________________________________________________________________*/
+
+/* Header e a Linha Horizontal */
+.header, 
+.content {
+  width: 90%; /* Ocupa quase a tela toda */
+  max-width: 1200px; 
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.backLink {
+  margin-left: 0; 
+  color: #a78bfa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.backLink:hover {
+  color: #42d392;
+  transform: translateX(-5px);
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem; 
+  font-weight: 800;
+  margin: 15px 0;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Linha igual o home */
+.header::after {
+  content: "";
+  width: 100%; 
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+}
+
+/*________________________________________________________________
+
+SEÇÃO DE CONTEÚDO ( CARDS, BOLINHAS NEON )
+
+__________________________________________________________________*/
+
+/* Bloco de Conteúdo centralizado */
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o bloco na página */
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+/* Garante que o card não tente ocupar a tela toda */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  width: 100%; /* Faz o box abrir e ocupar o espaço vazio */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* Detalhe visual: Barrinha lateral colorida em cada card */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #8b5cf6, #42d392);
+  opacity: 0.5;
+}
+
+.card:hover {
+  border-color: rgba(66, 211, 146, 0.4);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Títulos internos dos cards */
+.card h2 {
+  color: #ffffff;
+  font-size: 1.1rem;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bolinha Neon */
+.iconDot {
+  width: 8px;
+  height: 8px;
+  background-color: #42d392;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px #42d392, 0 0 20px rgba(66, 211, 146, 0.5);
+  flex-shrink: 0;
+}
+
+/* Texto descritivo */
+.card p {
+  text-align: left; /* Opcional: left fica melhor em blocos muito largos */
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  max-width: 1000px; /* Evita que a linha de texto fique longa demais para ler */
+}
+
+/*___________________________________________________________________
+
+RESPONSIVIDADE
+
+___________________________________________________________________*/
+
+@media (max-width: 768px) {
+  .title { font-size: 1.8rem; }
+  .card { padding: 20px; }
 }
