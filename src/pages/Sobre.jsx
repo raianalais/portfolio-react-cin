@@ -33,6 +33,16 @@ function Sobre() {
                     Além disso, busco explorar o desenvolvimento mobile e o desenvolvimento de jogos, ampliando minhas habilidades e unindo criatividade com tecnologia na criação de soluções interativas.</p>
                 </div>
 
+            {/* Habilidades Técnicas */}
+                <div className={styles.card}>
+                    <h2><span className={styles.iconDot}></span> Habilidades Técnicas</h2>
+                    <div className={styles.skillsList}>
+                        <p><strong>Foco Atual:</strong> Desenvolvimento Web (C++, React, HTML5, CSS Modules).</p>
+                        <p><strong>Linguagens e Lógica:</strong> Experiência acadêmica com Python e C++.</p>
+                        <p><strong>Ferramentas:</strong> Git, GitHub, VS Code, Figma e Loveble para prototipagem.</p>
+                    </div>
+                </div>
+
               {/* Card Objetivos */}
                 <div className={styles.card}>
                     <h2> <span className={styles.iconDot}></span>Objetivos Profissionais</h2>
