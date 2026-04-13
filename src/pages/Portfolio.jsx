@@ -56,7 +56,8 @@ function Portfolio() {
                     </div>
                     
                     <h3>Sobre o Projeto</h3>
-                    <p>Este projeto foi desenvolvido como um dos requisitos para a conclusão da disciplina Introdução à Programação.</p>
+                    <p>Jogo Vencedor – 1º Lugar (Melhor Jogo) <br />
+                    Projeto desenvolvido como requisito final da disciplina de Introdução à Programação. O jogo conquistou o primeiro lugar na competição da turma.</p>
 
                     <h3>Sobre o Jogo</h3>
                     <p>O Pesadelo de Jack é um jogo 2D inspirado no filme O Estranho Mundo de Jack. O jogador é desafiado a tomar decisões estratégicas enquanto explora um cenário que mescla elementos sombrios do Halloween com aspectos natalinos.</p>
